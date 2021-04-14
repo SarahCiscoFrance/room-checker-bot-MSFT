@@ -36,7 +36,7 @@ PORT=
     ```sh
     npm install
     ```
-1. Create a [BotFramework]https://dev.botframework.com/bots account, and note/save your MicrosoftAppId, MicrosoftAppPassword
+1. Create a [BotFramework](https://dev.botframework.com/bots) account, and note/save your MicrosoftAppId, MicrosoftAppPassword
 
 1. Edit the `.env` file and configure past your MicrosoftAppId and MicrosoftAppPassword. Also choose a PORT number.
 
