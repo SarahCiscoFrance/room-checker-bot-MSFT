@@ -96,18 +96,6 @@ With the Bot Framework Emulator connected to your running bot, the sample will n
 - Navigate to `http://localhost:3978/api/notify`
 - Using the Bot Framwork Emulator, notice a message was proactively sent to the user from the bot.
 
-## Proactive Messages
-
-In addition to responding to incoming messages, bots are frequently called on to send "proactive" messages based on activity, scheduled tasks, or external events.
-
-In order to send a proactive message using Bot Framework, the bot must first capture a conversation reference from an incoming message using `TurnContext.getConversationReference()`. This reference can be stored for later use.
-
-To send proactive messages, acquire a conversation reference, then use `adapter.continueConversation()` to create a TurnContext object that will allow the bot to deliver the new outgoing message.
-
-### Avoiding Permission-Related Errors
-
-You may encounter permission-related errors when sending a proactive message. This can often be mitigated by using `MicrosoftAppCredentials.trustServiceUrl()`. See [the documentation](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=javascript#avoiding-401-unauthorized-errors) for more information.
-
 ## Deploy this bot to Azure
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
