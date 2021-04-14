@@ -1,52 +1,26 @@
-# proactive messages
+# Room-Checker-Bot 🤖 MSFT Version
 
-Bot Framework v4 proactive messages bot sample
+## What is it ?
+This bot checks the availability of a room and allows you to book it.
+<img src="https://raw.githubusercontent.com/SarahCiscoFrance/room-checker-bot/master/Room-Checker-Visual.png" width="500">
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to send proactive messages to users by capturing a conversation reference, then using it later to initialize outbound messages.
+This form allows you to book the room during 30/45/60 minutes from the moment you submit the form.
 
-## Concepts introduced in this sample
+**How ?**
 
-Typically, each message that a bot sends to the user directly relates to the user's prior input. In some cases, a bot may need to send the user a message that is not directly related to the current topic of conversation. These types of messages are called proactive messages.
+All Webex Room, Board and Desk series devices come with intelligent people counting sensors directly embedded without any additional cost.
+So a Webex device in a room can tell us if this room is currently used or not.
 
-Proactive messages can be useful in a variety of scenarios. If a bot sets a timer or reminder, it will need to notify the user when the time arrives. Or, if a bot receives a notification from an external system, it may need to communicate that information to the user immediately. For example, if the user has previously asked the bot to monitor the price of a product, the bot can alert the user if the price of the product has dropped by 20%. Or, if a bot requires some time to compile a response to the user's question, it may inform the user of the delay and allow the conversation to continue in the meantime. When the bot finishes compiling the response to the question, it will share that information with the user.
+In our case the devices send 2 type of data to the Room-Checker-Bot through a macro :
+- **Presence** : the presence of a person in the room
+- **PeopleCount** : the number of people detected in the room
 
-This project has a notify endpoint that will trigger the proactive messages to be sent to
-all users who have previously messaged the bot.
+This data are send by the following marco : https://github.com/SarahCiscoFrance/room-checker-bot/blob/master/room-checker-macro.js
 
-## Prerequisites
+To add a device to the bot just install the macro on this device
 
-- [Node.js](https://nodejs.org) version 10.14 or higher
+## How to run 🔨
 
-    ```bash
-    # determine node version
-    node --version
-    ```
-
-## To try this sample
-
-- Clone the repository
-
-    ```bash
-    git clone https://github.com/microsoft/botbuilder-samples.git
-    ```
-
-- In a terminal, navigate to `samples/javascript_nodejs/16.proactive-messages`
-
-    ```bash
-    cd samples/javascript_nodejs/16.proactive-messages
-    ```
-
-- Install modules
-
-    ```bash
-    npm install
-    ```
-
-- Start the bot
-
-    ```bash
-    npm start
-    ```
 
 ## Testing the bot using Bot Framework Emulator
 
