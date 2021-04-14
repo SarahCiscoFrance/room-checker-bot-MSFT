@@ -21,6 +21,50 @@ To add a device to the bot just install the macro on this device
 
 ## How to run 🔨
 
+MicrosoftAppId=
+MicrosoftAppPassword=
+PORT=
+
+1. Clone this repo:
+
+    ```sh
+    git clone https://github.com/SarahCiscoFrance/room-checker-bot-MSFT.git
+    ```
+
+1. Change into the new repo's directory and install the Node.js dependencies:
+
+    ```sh
+    npm install
+    ```
+1. Create a [BotFramework]https://dev.botframework.com/bots account, and note/save your MicrosoftAppId, MicrosoftAppPassword
+
+1. Edit the `.env` file and configure past your MicrosoftAppId and MicrosoftAppPassword. Also choose a PORT number.
+
+1. Install mongodb and create a collection of objects that you will call "codecs" (see example below).
+    ```sh
+    {
+        "_id" : ObjectId("5e2809bbbb4e47d8339b0aed"),
+        "mac" : "6C:6C:D3:2B:F3:70",
+        "name" : "Kandinsky Dual 70",
+        "status" : false,"nbPeople" : 5,
+        "ip" : "10.1.110.182",
+        "publicIp" : "::ffff:10.1.110.182"
+    }
+    ```
+    
+1. Install the macro on your Webex device [link to the macro](https://github.com/SarahCiscoFrance/room-checker-bot/blob/master/room-checker-macro.js)
+
+    >This will allow the bot to receive presence data and have the device in its list 
+
+1. You're ready to run your bot:
+
+    ```sh
+    node index.js
+    ```
+
+
+
+# Extra informations
 
 ## Testing the bot using Bot Framework Emulator
 
@@ -67,20 +111,3 @@ You may encounter permission-related errors when sending a proactive message. Th
 ## Deploy this bot to Azure
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
-
-## Further reading
-
-- [Bot Framework Documentation](https://docs.botframework.com)
-- [Bot Basics](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
-- [Send proactive messages](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=js)
-- [continueConversation Method](https://docs.microsoft.com/en-us/javascript/api/botbuilder/botframeworkadapter#continueconversation)
-- [getConversationReference Method](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext#getconversationreference)
-- [Activity processing](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-activity-processing?view=azure-bot-service-4.0)
-- [Azure Bot Service Introduction](https://docs.microsoft.com/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0)
-- [Azure Bot Service Documentation](https://docs.microsoft.com/azure/bot-service/?view=azure-bot-service-4.0)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)
-- [Azure Portal](https://portal.azure.com)
-- [Language Understanding using LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/)
-- [Channels and Bot Connector Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
-- [Restify](https://www.npmjs.com/package/restify)
-- [dotenv](https://www.npmjs.com/package/dotenv)
