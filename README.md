@@ -21,10 +21,6 @@ To add a device to the bot just install the macro on this device
 
 ## How to run 🔨
 
-MicrosoftAppId=
-MicrosoftAppPassword=
-PORT=
-
 1. Clone this repo:
 
     ```sh
