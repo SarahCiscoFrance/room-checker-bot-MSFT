@@ -2,7 +2,7 @@
 
 ## What is it ?
 This bot checks the availability of a room and allows you to book it.
-<img src="https://raw.githubusercontent.com/SarahCiscoFrance/room-checker-bot/master/Room-Checker-Visual.png" width="500">
+<img src="https://raw.githubusercontent.com/SarahCiscoFrance/room-checker-bot-MSFT/master/Visual-msft.png" width="500">
 
 This form allows you to book the room during 30/45/60 minutes from the moment you submit the form.
 
