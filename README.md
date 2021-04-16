@@ -39,12 +39,13 @@ To add a device to the bot just install the macro on this device
 1. Install mongodb and create a collection of objects that you will call "codecs" (see example below).
     ```sh
     {
-        "_id" : ObjectId("5e2809bbbb4e47d8339b0aed"),
-        "mac" : "6C:6C:D3:2B:F3:70",
-        "name" : "Kandinsky Dual 70",
-        "status" : false,"nbPeople" : 5,
-        "ip" : "10.1.110.182",
-        "publicIp" : "::ffff:10.1.110.182"
+        "_id" : ObjectId("1e2108bbbb4e47d8335c0bea"),
+        "mac" : "00:00:00:00:00:00",
+        "name" : "Webex DEVICE_NAME",
+        "status" : false,
+        "nbPeople" : 2,
+        "ip" : "192.168.0.1",
+        "publicIp" : "::ffff:192.168.0.1"
     }
     ```
     
